@@ -24,13 +24,13 @@ function sendSSE(req, res) {
     'Cache-Control': 'no-cache',
     'Connection': 'keep-alive',
     // Website you wish to allow to connect
-    'Access-Control-Allow-Origin': 'http://localhost:4200',
 
     // Request methods you wish to allow
     'Access-Control-Allow-Methods':'GET',
 
     // Request headers you wish to allow
     'Access-Control-Allow-Headers':'X-Requested-With,content-type',
+    'Access-Control-Allow-Origin': 'http://localhost',
     'Access-Control-Allow-Credentials': true
 
   });
@@ -54,7 +54,7 @@ function constructSSE(res) {
     [{id:1,state:'ERROR'},{id:2,state:'OK'},{id:3,state:'OK'},{id:4,state:'OK'}],
   ];
   var data = JSON.stringify(satArray[index]);
-  var id = Math.floor(Math.random() * 99999999999);
+  var id = Math.floor(Math.random() * 99999999);
   console.log("id: "+id);
   console.log("data: "+data);
   res.write('id: ' + id + '\n');

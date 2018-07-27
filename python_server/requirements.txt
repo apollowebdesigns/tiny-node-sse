@@ -1,0 +1,4 @@
+cffi==1.11.5
+websockets==6.0
+pycparser==2.18
+asyncio==3.4.3

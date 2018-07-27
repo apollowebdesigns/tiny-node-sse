@@ -30,7 +30,7 @@ function sendSSE(req, res) {
 
     // Request headers you wish to allow
     'Access-Control-Allow-Headers':'X-Requested-With,content-type',
-    'Access-Control-Allow-Origin': 'http://localhost',
+    'Access-Control-Allow-Origin': 'http://localhost:4200',
     'Access-Control-Allow-Credentials': true
 
   });
